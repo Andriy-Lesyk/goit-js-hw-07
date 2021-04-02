@@ -1,0 +1,16 @@
+const ingredients = [
+    'Картошка',
+    'Грибы',
+    'Чеснок',
+    'Помидоры',
+    'Зелень',
+    'Приправы',
+  ];
+  const newEl = document.querySelector('ul')
+ 
+  ingredients.forEach(ingredient=>{
+    const newEl1 = document.createElement('li')  
+    newEl1.textContent = ingredient
+    newEl.appendChild(newEl1)
+  });
+  
