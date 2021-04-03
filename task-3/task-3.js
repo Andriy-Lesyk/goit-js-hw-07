@@ -31,6 +31,8 @@ const images = [
   newList.insertAdjacentElement('beforeend',imgEl)
   imgEl.insertAdjacentElement('beforeend', urlEl)
   imgEl.insertAdjacentElement('beforeend', altEl)
+
+
   });
  images.map(makeNewList);
  console.log(newEl)
