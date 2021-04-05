@@ -15,24 +15,17 @@ const images = [
       alt: 'Group of Horses Running',
     },
   ]
-  const newEl = document.querySelector('ul');
-  const makeNewList = (({url, alt})=>{
-  const newList = document.createElement('li')    
-  const imgEl = document.createElement('img')
-  imgEl.classList.add('img_item')
+const newEl = document.querySelector('#gallery');
 
-  const urlEl = document.createElement('url')
-  urlEl.textContent = url
-
-  const altEl = document.createElement('alt')
-  altEl.textContent = alt
-  
-  newEl.insertAdjacentElement('beforeend',newList)
-  newList.insertAdjacentElement('beforeend',imgEl)
-  imgEl.insertAdjacentElement('beforeend', urlEl)
-  imgEl.insertAdjacentElement('beforeend', altEl)
-
-
-  });
- images.map(makeNewList);
- console.log(newEl)
+const imagesItemTemplate = ({url, alt})=>{
+  return
+`<li>
+  <img>url: ${url}, alt: ${alt} </img>
+</li>`
+};
+const markUp=images.map(image=>imagesItemTemplate(image)).join("");
+console.log(markUp)
+newEl.insertAdjacentHTML('beforeend', markUp)
+ 
+console.log(newEl) 
+ 
