@@ -10,10 +10,10 @@ btns[0].addEventListener('click', createBoxes );
 
 function createBoxes(amounts) {
     amounts = newEl.value;
+    let width = `30 px`;
+    let hight = `30 px`;
     for(let i=1; i<=amounts; i+=1){
-        let amount = document.createElement('div')
-        let width = 30 
-        let hight = 30 
+        let amount = document.createElement('div') 
         amount.width = width + 10
         amount.hight = hight + 10
         amount.backgroundColor = (`${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}`)
