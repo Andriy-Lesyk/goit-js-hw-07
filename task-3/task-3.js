@@ -18,8 +18,8 @@ const images = [
 const newEl = document.querySelector('#gallery');
 
 const imagesItemTemplate = ({url, alt})=>{
-  return
-`<li>
+  return`
+<li>
   <img>url: ${url}, alt: ${alt} </img>
 </li>`
 };
@@ -27,5 +27,5 @@ const markUp=images.map(image=>imagesItemTemplate(image)).join("");
 console.log(markUp)
 newEl.insertAdjacentHTML('beforeend', markUp)
  
-console.log(newEl) 
+
  

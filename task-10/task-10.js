@@ -6,17 +6,20 @@ const cars = [
 const newEl= document.querySelector('.cars')
 console.log(newEl)
 
-const carsListItem = ({make, model, price})=>{
-    
-    return
-`<li >
-    <p>Производитель: ${make}</p>
-    <p>Модель: ${model}</p>
-    <p>Цена: ${price}</p>
+const carsListItem =(cars) =>{
+ return ` 
+  
+<li >
+    <p>Производитель: ${cars.make}</p>
+    <p>Модель: ${cars.model}</p>
+    <p>Цена: ${cars.price}</p>
    
-</li>`
-}
-console.log(carsListItem(cars[1]))
+</li>`;
+
+};
+
+const markup = cars.map(carsListItem).join('')
+console.log(markup);
 
 
-//newEl.insertAdjacentHTML('beforeend', carsListItem)
+newEl.insertAdjacentHTML('beforeend', markup)
